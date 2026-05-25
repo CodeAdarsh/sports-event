@@ -3,38 +3,54 @@ import './App.css'
 const categories = [
   {
     title: 'Football League',
-    description: 'Co-ed teams compete in fast-paced matches across the main stadiums.',
+    description: 'High-energy stadium matches for club and alumni teams.',
+    icon: '⚽',
     color: 'var(--blue)',
   },
   {
-    title: 'Basketball Showdown',
-    description: 'Indoor courts with 3x3 and full-court divisions for every age group.',
-    color: 'var(--orange)',
-  },
-  {
-    title: 'Track & Field',
-    description: 'Sprint, relay, long jump, and shot put events powered by open-air energy.',
+    title: 'Cricket Open Cup',
+    description: 'Day-long innings, powerplay battles, and boundary excitement.',
+    icon: '🏏',
     color: 'var(--green)',
   },
   {
-    title: 'Family Fun Zone',
-    description: 'Kids relays, obstacle challenges, and weekend activities for families.',
+    title: 'Badminton Rally',
+    description: 'Fast court action with singles, doubles, and expert serve play.',
+    icon: '🏸',
+    color: 'var(--orange)',
+  },
+  {
+    title: 'Basketball Showdown',
+    description: '3x3 and full-court tournaments for rising scorers and teams.',
+    icon: '🏀',
     color: 'var(--purple)',
+  },
+  {
+    title: 'Tennis Challenge',
+    description: 'Singles, doubles, and mixed matchups on quality hard courts.',
+    icon: '🎾',
+    color: 'var(--secondary)',
+  },
+  {
+    title: 'Track & Field',
+    description: 'Sprint relays, hurdles, long jump, and relay championship finals.',
+    icon: '🏃‍♂️',
+    color: 'var(--pink, #ec4899)',
   },
 ]
 
 const schedule = [
   {
     day: 'Friday',
-    events: ['Opening ceremony', 'Football group stage', 'Youth track heats'],
+    events: ['Cricket qualifiers', 'Football group stage', 'Badminton speed rounds'],
   },
   {
     day: 'Saturday',
-    events: ['Basketball knockout rounds', 'Family festival', 'Community fitness clinic'],
+    events: ['Basketball knockout matches', 'Tennis doubles bracket', 'Relay heats'],
   },
   {
     day: 'Sunday',
-    events: ['Track finals', 'Championship showcase', 'Awards & closing party'],
+    events: ['Championship finals', 'Medal ceremonies', 'Athlete showcase games'],
   },
 ]
 
@@ -63,7 +79,7 @@ function App() {
             <span className="eyebrow">Multi-category sports festival</span>
             <h1>Compete, celebrate, and connect across every field.</h1>
             <p className="hero-text">
-              Experience football, basketball, track & field, and family-friendly
+              Experience football, cricket, badminton, basketball, tennis, and track
               competitions designed for athletes, teams, and supporters.
             </p>
             <div className="hero-actions">
@@ -91,10 +107,10 @@ function App() {
           </div>
           <div className="hero-panel" aria-hidden="true">
             <div className="panel-card panel-card-top">
-              Opening ceremony, live music, and sponsor village.
+              Championship finals, record-breaking runs, and goal celebrations.
             </div>
             <div className="panel-card panel-card-bottom">
-              Family zone, food trucks, and pro showcase sessions.
+              Team warm-ups, athlete drills, and action-packed match play.
             </div>
           </div>
         </section>
@@ -107,6 +123,9 @@ function App() {
           <div className="category-grid">
             {categories.map((category) => (
               <article key={category.title} className="category-card">
+                <span className="category-icon" aria-hidden="true">
+                  {category.icon}
+                </span>
                 <div className="category-label" style={{ background: category.color }} />
                 <h3>{category.title}</h3>
                 <p>{category.description}</p>
@@ -137,25 +156,24 @@ function App() {
         <section id="about" className="about-section">
           <div className="about-copy">
             <span className="section-tag">Why SportsFest</span>
-            <h2>Designed for athletes, families, and local communities.</h2>
+            <h2>Built for athletes and teams who thrive on competition.</h2>
             <p>
-              From competitive leagues to relaxed challenge zones, SportsFest brings
-              every athlete together with a festival atmosphere, easy registration,
-              and elevated event production.
+              Every event is hosted on official courts, pitches, and tracks with
+              certified referees, live scoring, and medal recognition.
             </p>
           </div>
           <div className="about-list">
             <div className="feature-card">
-              <h3>Professional venues</h3>
-              <p>High-quality courts, tracks, and fields for every event.</p>
+              <h3>Official match rules</h3>
+              <p>Certified referees and standard competition formats for every sport.</p>
             </div>
             <div className="feature-card">
-              <h3>Family-friendly</h3>
-              <p>Kids activities, spectator zones, and weekend entertainment.</p>
+              <h3>Live scoreboards</h3>
+              <p>Track every game, match, and heat with real-time standings.</p>
             </div>
             <div className="feature-card">
-              <h3>Real-time results</h3>
-              <p>Live scores, standings, and updates across every competition.</p>
+              <h3>Medals & trophies</h3>
+              <p>Champion awards for elite teams and standout athletes.</p>
             </div>
           </div>
         </section>
