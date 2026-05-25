@@ -18,3 +18,8 @@ The site is ready to deploy from the `dist` folder after running `npm run build`
 - `src/` — React app source files
 - `public/` — static assets
 - `package.json` — project scripts and dependencies
+
+## Live demo
+
+- Production: https://splendid-kitten-607d03.netlify.app
+- Unique deploy preview: https://6a1470a05c16728c7860f62f--splendid-kitten-607d03.netlify.app
